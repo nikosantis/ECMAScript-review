@@ -87,3 +87,67 @@ console.log(education)
 
 console.log(globalVar)
 // console.log(globalLet) error
+
+//
+
+const a = 'b'
+a = 'a'
+console.log(a)
+
+
+//
+
+let name = 'Nikolas'
+let age = 31
+
+obj = { name: name, age: age }
+
+console.log(obj)
+
+// es6
+obj2 = { name, age }
+
+console.log(obj2)
+
+//
+
+const names = [
+  { name: 'Nikolas', age: 31 },
+  { name: 'Angie', age: 32 }
+]
+
+let listOfNames = names.map(function (item) {
+  console.log(item.name)
+})
+
+// es6
+
+let listOfNames2 = names.map(item => console.log(item.name))
+
+const listOfNames3 = (name, age, country) => {
+  // ...
+}
+
+const listOfNames4 = name => {
+  // ...
+}
+
+const square = num => num * num
+
+// es6 promises
+
+const helloPromise = () => {
+  return new Promise((resolve, reject) => {
+    if (true) {
+      resolve('Hey!')
+    } else {
+      reject('Ups!!')
+    }
+  })
+}
+
+helloPromise()
+  .then(response => console.log(response))
+  .then(() => console.log('[OK]'))
+  .catch(error => console.log(error))
+
