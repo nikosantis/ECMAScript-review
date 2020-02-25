@@ -151,3 +151,40 @@ helloPromise()
   .then(() => console.log('[OK]'))
   .catch(error => console.log(error))
 
+// es6
+
+class calculator {
+  constructor() {
+    this.valueA = 0
+    this.valueB = 0
+  }
+
+  sum (valueA, valueB) {
+    this.valueA = valueA
+    this.valueB = valueB
+    return this.valueA + this.valueB
+  }
+}
+
+const calc = new calculator()
+console.log('[RES]', calc.sum(2, 3))
+
+
+// es6
+
+import helloWorld from './moduleJS';
+console.log(helloWorld);
+
+function* helloWorld2 () {
+  if (true) {
+    yield 'Hello, wtf'
+  }
+  if (true) {
+    yield 'World, wtf'
+  }
+}
+
+const generatorHello = helloWorld2()
+console.log(generatorHello.next().value)
+console.log(generatorHello.next().value)
+console.log(generatorHello.next().value)
